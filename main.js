@@ -1,17 +1,4 @@
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-};
+import _ from 'lodash'
 
-async function makeError() {
-  await sleep(1000);
-  const error = new Error();
-  throw error;
-};
-
-async function process() {
-  try {
-    await makeError();
-  } catch (e) {
-    console.error(e);
-  }
-}
+console.log('hello world');
+console.log(_.camelCase('hello world'));
